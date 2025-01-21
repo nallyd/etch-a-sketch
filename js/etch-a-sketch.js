@@ -1,8 +1,10 @@
 console.log("We're live!");
 
-const grid = document.querySelector(".grid");
+const field = document.querySelector(".field");
 
 function createSquareGrid(container, size) {
+    const grid = document.createElement("div");
+    grid.setAttribute("class", "grid");
     for (let i = 0; i < size; i++) {
         const row = document.createElement("div");
         row.setAttribute("class", "row");
@@ -13,8 +15,17 @@ function createSquareGrid(container, size) {
             row.appendChild(box);
         }
 
-        container.appendChild(row);
+        grid.appendChild(row);
     }
+
+    container.appendChild(grid);
+    return;
 }
 
-createSquareGrid(grid, 16);
+function removeGrid(container) {
+    console.log(`Removing ${container.firstElementChild} from the field`);
+    container.removeChild(container.firstElementChild);
+    return;
+}
+
+createSquareGrid(field, 16);
