@@ -1,0 +1,87 @@
+/*
+ * Global Selections
+ */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #D2042D;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+/*
+ * Header Section
+ */
+
+header {
+    background-color: #D2042D;
+    color: #D3AF37;
+    margin: 8px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+header h1 {
+    font-size: 32px;
+    text-shadow: 1px 0 black;
+}
+
+/*
+ * Sketch Section
+ */
+
+.field {
+    background-color: white;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.grid-box {
+    background-color: white;
+    border: 1px solid black;
+    height: 25px;
+    width: 25px;
+
+}
+
+/*
+ * Footer Section
+ */
+
+footer {
+    font-size: 12px;
+    color: #D3D3D3;
+    padding: 8px;
+    margin: 8px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.knob {
+    background-color: #D3D3D3;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    box-shadow: 1px 1px black;
+}
+
