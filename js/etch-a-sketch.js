@@ -6,6 +6,7 @@ const resetSizeButton = document.querySelector(".options button");
 // Modifiers
 const rgbCheck = document.querySelector("#rgb");
 const fadeCheck = document.querySelector("#fade");
+const gridCheck = document.querySelector("#gridlines");
 
 let rgbColoring = false;
 let fadeDrawing = false;
@@ -38,6 +39,7 @@ function createSquareGrid(container, size) {
 
 function removeGrid(container) {
     container.removeChild(container.firstElementChild);
+    gridCheck.checked = false;
     return;
 }
 
@@ -87,6 +89,17 @@ rgbCheck.addEventListener("change", () => {
 
 fadeCheck.addEventListener("change", () => {
     fadeDrawing = fadeCheck.checked;
+});
+
+gridCheck.addEventListener("change", () => {
+    let blocks = document.querySelectorAll(".grid-box");
+    blocks.forEach((node) => {
+        if (gridCheck.checked) {
+            node.style.border = "none";
+        } else {
+            node.style.border = "1px solid black";
+        }
+    });
 });
 
 createSquareGrid(field, 16);
