@@ -64,6 +64,13 @@ header h1 {
 .grid-box {
     border: 1px solid black;
     flex: 1;
+    display: flex;
+    align-items: stretch;
+}
+
+.content {
+    opacity: 0;
+    flex: 1
 }
 
 .hovered {
@@ -71,11 +78,24 @@ header h1 {
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 .options button {
     font-size: 12px;
     padding: 4px 8px;
+}
+
+.new-grid,
+.modifiers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 /*
